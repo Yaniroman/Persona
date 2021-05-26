@@ -7,6 +7,7 @@ public class Principal {
 		System.out.println(persona1.nombre + " " + persona1.edad);
 		System.out.println(persona2.nombre);
 		System.out.println(persona1.edad);
+		System.out.println("HOLA");
 	}
 
 }
