@@ -4,9 +4,9 @@ public class Persona {
 	public String nombre;
 	public String apellido;
 	public int dni;
-	public int edad;
+	private int edad;
 	public int altura;
-	public int peso;
+	public float peso;
 	public String estado;
 
 	public Persona(String nombre, String apellido, int dni, int edad, int altura, int peso) {
@@ -35,15 +35,57 @@ public class Persona {
 		this.edad = edad;
 	}
 
+	
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public int getDni() {
+		return dni;
+	}
+
+	public void setDni(int dni) {
+		this.dni = dni;
+	}
+
+	public int getAltura() {
+		return altura;
+	}
+
+	public void setAltura(int altura) {
+		this.altura = altura;
+	}
+
+	public float getPeso() {
+		return peso;
+	}
+
+	public void setPeso(float peso) {
+		this.peso = peso;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
 	public void Caminar() {
 
 	}
 
 	public void Sentarse() {
-
+		this.estado = "Sentado";
 	}
 
 	public void Pararse() {
+		this.estado = "Parado";
 
 	}
 
@@ -51,12 +93,12 @@ public class Persona {
 
 	}
 
-	public void Engordar() {
-
+	public void Engordar(int kilos) {
+		this.peso = this.peso + kilos;
 	}
 
-	public void Adelgazar() {
-
+	public void Adelgazar(int kilos) {
+		this.peso = this.peso - kilos;
 	}
 
 }
